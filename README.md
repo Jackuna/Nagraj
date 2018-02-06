@@ -1,5 +1,7 @@
 # Nagraj : King of Nagios Dashboards
-Flat NagiosXI Dashing Dashboard based on Dashing project.
+Flat Nagios Dashing Dashboard based on Dashing project.
+This Nagios Dashboard can be integrated with Nagios Core and NagiosXI both.
+
 It's a cool dashboard with responsive layouts and Hotness Indicators [ Red & Green ]  and Meter Widgets.
 
 It has cool features like
