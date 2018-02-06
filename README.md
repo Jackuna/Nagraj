@@ -3,6 +3,7 @@ Flat NagiosXI Dashing Dashboard based on Dashing project.
 It's a cool dashboard with responsive layouts and Hotness Indicators [ Red & Green ]  and Meter Widgets.
 
 It has cool features like
+
 Show your Custom Logo.
 
 12 Hours Clock.
