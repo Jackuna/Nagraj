@@ -14,5 +14,8 @@ Show Weather status with frequently changing color of dashlets and logo based on
 
 Every Host and Service dashlet has a meter with changing color scheme depending upon severity.
 
-![alt text](https://github.com/Jackuna/Nagraj/blob/master/NagRaj.jpg)
+![Nagraj with NagiosXI](https://github.com/Jackuna/Nagraj/blob/master/NagRaj.jpg)
+
+![Nagraj with Nagios Core ](https://github.com/Jackuna/Nagraj/blob/master/NagRaj_with_NagiosCore.jpg)
+
 
