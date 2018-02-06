@@ -10,6 +10,8 @@ Show your Custom Logo.
 
 12 Hours Clock.
 
+Scrolling Message of the day or Informations to display at the bottom.
+
 Show Weather status with frequently changing color of dashlets and logo based on weather types.
 
 Every Host and Service dashlet has a meter with changing color scheme depending upon severity.
