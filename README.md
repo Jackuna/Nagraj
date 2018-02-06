@@ -6,7 +6,9 @@ I have designed it to fit big monitors/TV screens kept within floor, to monitor 
 
 It has cool features like
 
-* Cool dashboard with responsive layouts and Hotness Indicators [ Red & Green ]  and Meter Widgets.
+* Cool dashboard with responsive layouts and Hotness Indicators [ Red & Green ]  and 
+
+* Responsive Meter Widgets.
 
 * Show your Custom Logo.
 
