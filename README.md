@@ -1,4 +1,4 @@
-# Nagraj : King of Nagios Dashboards
+# NagRaj : King of Nagios Dashboards
 Flat Nagios Dashing Dashboard based on Dashing project.
 This Nagios Dashboard can be integrated with Nagios Core and NagiosXI both.
 
