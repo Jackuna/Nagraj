@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ruby is the backbone of dashing project hence an ultimate dependency.
+# The detailed installation has been documented at http://www.cyberkeeda.com/2018/02/ruby-installation-on-centos-with-rvm.html
+
 # Installation of Required dependency mandatory Packages
 
 yum install gcc-c++ patch readline readline-devel zlib zlib-devel
