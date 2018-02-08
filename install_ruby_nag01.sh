@@ -5,9 +5,12 @@
 
 # Installation of Required dependency mandatory Packages
 
-yum install gcc-c++ patch readline readline-devel zlib zlib-devel
-yum install libyaml-devel libffi-devel openssl-devel make
-yum install bzip2 autoconf automake libtool bison iconv-devel sqlite-devel
+yum -y install epel-release
+yum -y install gcc-c++ patch readline readline-devel zlib zlib-devel
+yum -y install libyaml-devel libffi-devel openssl-devel make
+yum -y install bzip2 autoconf automake libtool bison iconv-devel sqlite-devel
+yum -y install openssl gcc-c++ make nodejs jq
+
 
 # Installation of RVM begins here
 
