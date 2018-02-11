@@ -1,0 +1,96 @@
+<script type='text/javascript'>
+
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.widget_base_dimensions = [300,300]
+  Dashing.numColumns = 5
+});
+
+
+
+</script>
+
+<% content_for :title do %> NagiosXI<% end %>
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-image="/xnagios.png"></div>
+    </li>
+
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <i class="fa fa-clock-o icon-background"></i>
+      <div data-view="TwelveHourClock"></div>
+	</li>
+
+	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+  	    <div data-id="klimato" data-view="Klimato"></div>
+	</li>
+
+	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+	<i class="fa fa-wrench icon-background"></i>
+      	
+	     <div data-id="customwid" data-view="Number" data-title="Downtime Hosts " data-moreinfo="Host Under Scheduled Downtime" ></div>
+	  <i class="icon-ok icon-background"></i>
+      </li>
+	
+<!--
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="example_data" data-view="Meter" data-title="Host" data-height="200" data-width="200" data-min="0" data-max="200"></div>
+    </li>
+
+-->
+
+<!-- RED- GREEN Template meter -->
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="Host Up" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
+    </li>
+
+	<li data-row="3" data-col="4" data-sizex="2" data-sizey="2">
+      <div data-id="iframeId1" data-view="Iframe" data-src="https://nagios.example.com/nagios/cgi-bin/status.cgi?hostgroup=all&style=summary" style=" margin-left: 0px;  margin-bottom: -533px; width: 926px;"></div>
+       </li>
+
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagios/"></div>
+       </li>
+
+
+	 <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      	    <div data-id="host_down" data-view="MeterRg" data-title="Host Down" data-min="0" data-max="" data-threshold="0"></div>
+    	</li>
+
+ 
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="service_okay" data-view="Meter" data-title="Service Okay" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
+    </li>
+
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+     
+      <div data-id="service_warning" data-view="Meter" data-title="Service Warning" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#FABE28"></div>
+    </li>
+
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+<!--
+      <div data-id="service_critical" data-view="Meter" data-title="Service Critical" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#FF003C"></div>
+-->
+      <div data-id="service_critical" data-view="MeterRg" data-title="Service Critical" data-min="0" data-max="" data-threshold="0"></div>
+
+    </li>
+
+	
+<!--	
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="Thought of the Day :) ." data-moreinfo="Protip: You can drag the widgets around!"></div>
+    </li>
+
+-->
+
+  </ul>
+
+
+<div data-id="ticker" data-view="Ticker" data-scroll_orientation="horizontal" style="display: none;" ></div>
+
+  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
+</div>
