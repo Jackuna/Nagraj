@@ -33,9 +33,9 @@ Snapshot 02 -- Applicable to Nagios Core
 
 ![Nagraj with NagiosXI](https://github.com/Jackuna/Nagraj/blob/master/NagRaj.jpg)
 
-![Nagraj with Nagios Core ](https://github.com/Jackuna/Nagraj/blob/master/NagRaj_with_NagiosCore.jpg)
-
 ![Nagraj with Nagios Core ](https://github.com/Jackuna/Nagraj/blob/master/Nagraj_snap03.jpg)
+
+![Nagraj](https://github.com/Jackuna/Nagraj/blob/master/anim_nagraj.gif)
 
 
 
