@@ -34,17 +34,13 @@ $(function() {
   	    	<div data-id="klimato" data-view="Klimato"></div>
 	</li>
 
-<!-- Host Under Scheduled Downtime with Number Widget -->
 
-	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-	<i class="fa fa-wrench icon-background"></i>
-      		 <div data-id="downtime_host" data-view="Number" data-title="Downtime Hosts " data-moreinfo="Host Under Scheduled Downtime" ></div>
-       </li>
 	
 
 <!-- Host Up with Meter and Red and Green Hotness Number Widget Section -->
 
-    	<li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+    	<li data-row="2" data-col="1" data-sizex="1" data-sizey="1" onclick="location.href='https://nagios.example.com/nagios/cgi-bin/status.cgi?hostgroup=all&style=hostdetail&hoststatustypes=2';">
+
        		<div data-id="hosts_up" data-view="Meter" data-title="Host Up" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
     	</li>
 
@@ -53,6 +49,13 @@ $(function() {
 	 <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
       	    	<div data-id="host_down" data-view="MeterRg" data-title="Host Down" data-min="0" data-max="" data-threshold="0"></div>
    	 </li>
+
+<!-- Host Under Scheduled Downtime with Number Widget -->
+
+	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+	<i class="fa fa-wrench icon-background"></i>
+      		 <div data-id="downtime_host" data-view="Number" data-title="Downtime Hosts " data-moreinfo="Host Under Scheduled Downtime" ></div>
+       </li>
 	
 <!-- Nagios URL within Iframe widget section -->
 
