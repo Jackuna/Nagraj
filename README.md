@@ -102,7 +102,7 @@ Please note : any misconfiguration at this stage is vital, if mistakely you had 
 ```
 su - dashingadmin
 
-git clone nagraj_master_repo_link.git
+git clone https://github.com/Jackuna/Nagraj.git
 
 cd Nagraj
 
