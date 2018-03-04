@@ -46,7 +46,7 @@ Overall we will be achieving the below bullet point to run nagraj
 * Installation of Ruby from RVM
 * Mandatory RubyGems installation.
 * User selection/creation to run dashing application.
-* Download Nagrj application.
+* Download Nagraj application.
 * Configuration of Nagraj to retrive data from your Nagios Server.
 * Bundle and run dashing application 
 
