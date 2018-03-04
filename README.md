@@ -102,7 +102,7 @@ Please note : any misconfiguration at this stage is vital, if mistakely you had 
 ```
 su - dashingadmin
 
-git clone https://github.com/Jackuna/Nagraj.git
+git clone https://github.com/Jackuna/nagraj.git
 
 cd Nagraj
 
@@ -118,8 +118,9 @@ Provide it the requested inputs, it would be mainly the nagios server url and na
 I still assume, you are are into Nagraj directory and navigating through dashingadmin user.
 If not,
 
-> su - dashingadmin; cd Nagraj
+> su - dashingadmin; cd nagraj
 
+You must be under nagraj directory to run the below commands
 ```
 bundle install --path vendor/bundle
 
