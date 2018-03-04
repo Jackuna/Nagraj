@@ -2,7 +2,7 @@
 
 $(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-  Dashing.widget_base_dimensions = [300,300]
+  Dashing.widget_base_dimensions = [280,300]
   Dashing.numColumns = 5
 });
 
@@ -10,69 +10,98 @@ $(function() {
 
 </script>
 
-<% content_for :title do %> NagiosXI<% end %>
+<% content_for :title do %> Nagraj<% end %>
 <div class="gridster">
+
   <ul>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-view="Image" data-image="/xnagios.png"></div>
+  <!-- Logo Section -->
+
+    	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      		<div data-view="Image" data-image="/xnagios.png"></div>
     </li>
 
-	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <i class="fa fa-clock-o icon-background"></i>
-      <div data-view="TwelveHourClock"></div>
-	</li>
+<!-- 12 Hour Clock Section -->
 
 	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-  	    <div data-id="klimato" data-view="Klimato"></div>
+      	<i class="fa fa-clock-o icon-background"></i>
+      		<div data-view="TwelveHourClock"></div>
 	</li>
+
+<!-- Your City Weather Section -->
+
+	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+  	    	<div data-id="klimato" data-view="Klimato"></div>
+	</li>
+
+
+	
+
+<!-- Host Up with Meter and Red and Green Hotness Number Widget Section -->
+
+    	<li data-row="2" data-col="1" data-sizex="1" data-sizey="1" onclick="location.href='https://nagios.example.com/nagios/cgi-bin/status.cgi?hostgroup=all&style=hostdetail&hoststatustypes=2';">
+
+       		<div data-id="hosts_up" data-view="Meter" data-title="Host Up" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
+    	</li>
+
+<!-- Host Down with Meter and Red and Green Hotness Number Widget Section -->
+	
+	 <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      	    	<div data-id="host_down" data-view="MeterRg" data-title="Host Down" data-min="0" data-max="" data-threshold="0"></div>
+   	 </li>
+
+<!-- Host Under Scheduled Downtime with Number Widget -->
 
 	<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
 	<i class="fa fa-wrench icon-background"></i>
-      	
-	     <div data-id="downtime_host" data-view="Number" data-title="Downtime Hosts " data-moreinfo="Host Under Scheduled Downtime" ></div>
-	  <i class="icon-ok icon-background"></i>
-      </li>
+      		 <div data-id="downtime_host" data-view="Number" data-title="Downtime Hosts " data-moreinfo="Host Under Scheduled Downtime" ></div>
+       </li>
 	
+<!-- Nagios URL within Iframe widget section -->
 
-<!-- RED- GREEN Template meter -->
+	<li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+       		<div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagios/"></div>
+    	</li>
 
-    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="hosts_up" data-view="Meter" data-title="Host Up" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
-    </li>
-	
-	 <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      	    <div data-id="host_down" data-view="MeterRg" data-title="Host Down" data-min="0" data-max="" data-threshold="0"></div>
-    </li>
-	
-	<li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagios/"></div>
-    </li>
 
-	<li data-row="3" data-col="4" data-sizex="2" data-sizey="2">
-      <div data-id="iframeId1" data-view="Iframe" data-src="https://nagios.example.com/nagios/cgi-bin/status.cgi?hostgroup=all&style=summary" style=" margin-left: 0px;  margin-bottom: -533px; width: 926px;"></div>
-    </li>
+<!-- Nagios URL within Iframe widget section -->
+<!--
 
-    
+	<li data-row="2" data-col="4" data-sizex="2" data-sizey="2">
+      		<div data-id="iframeId1" data-view="Iframe" data-src="https://nagios.example.com/nagios/cgi-bin/status.cgi?hostgroup=all&style=summary" style=" margin-left: 0px;  margin-bottom: -533px; width: 926px;"></div>
+    	</li>
 
- 
-    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="service_okay" data-view="Meter" data-title="Service Okay" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
-    </li>
+ -->   
 
-    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">     
-      <div data-id="service_warning" data-view="Meter" data-title="Service Warning" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#FABE28"></div>
-    </li>
+ <!-- Service Okay with Meter and Red and Green Hotness Number Widget Section -->
 
-    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="service_critical" data-view="MeterRg" data-title="Service Critical" data-min="0" data-max="" data-threshold="0"></div>
-    </li>
+
+    	<li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      		<div data-id="service_okay" data-view="Meter" data-title="Service Okay" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#00C176"></div>
+    	</li>
+
+ <!-- Service Warning with simple meter widget Section -->
+
+    	<li data-row="3" data-col="2" data-sizex="1" data-sizey="1">     
+      		<div data-id="service_warning" data-view="Meter" data-title="Service Warning" data-height="200" data-width="200" data-min="0" data-max=""data-suffix="" style="background-color:#FABE28"></div>
+    	</li>
+
+ <!-- Service Critical with Meter and Red and Green Hotness Number Widget Section  -->
+
+    	<li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      		<div data-id="service_critical" data-view="MeterRg" data-title="Service Critical" data-min="0" data-max="" data-threshold="0"></div>
+    	</li>
 
 
   </ul>
 
 
-<div data-id="ticker" data-view="Ticker" data-scroll_orientation="horizontal" style="display: none;" ></div>
+ <!-- Ticker Widget with Scrolling text at the bottom -->
 
+	<div data-id="ticker" data-view="Ticker" data-scroll_orientation="horizontal" style="display: none;" ></div>
+
+<!--
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
 </div>
+
+-->
