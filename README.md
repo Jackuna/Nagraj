@@ -39,4 +39,17 @@ Snapshot 02 -- Applicable to Nagios Core
 
 
 
+### Installaton & Configuration
+
+Overall we will be achieving the below bullet point to run nagraj
+* Installation of Dependencies.
+* Installation of Ruby from RVM
+* Mandatory RubyGems installation.
+* User selection/creation to run dashing application.
+* Download Nagrj application.
+* Configuration of Nagraj to retrive data from your Nagios Server.
+* Bundle and run dashing application 
+
+
+
 
