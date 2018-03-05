@@ -43,5 +43,8 @@ SCHEDULER.every '180s' do
     send_event('iframeId1',   { src: service_warning })
 
     sleep(10)
+    
+    send_event('iframeId1',   { src: url })
+
 
 end
