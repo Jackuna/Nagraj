@@ -133,7 +133,24 @@ To run dashing in background
 >   dashing start -d
 
 
+### So you are all set to run your nagraj dashing-nagios application.
 
+Point the below links from your browser.
+
+Applicable to low screen resolutions
+
+` http:<your server ip>:3030/nagraj ` 
+
+Applicable to bigger screen resolutions monitors/tvscreens 
+
+`http:<your server ip>:3030/nagrajtv  `
+
+
+Though you can anytime change the dashlets height & width by changing nagraj.erb and nagajtv.erb files placed within `nagraj/dashboards` directory.
+
+```  Dashing.widget_base_dimensions = [280,300] ```
+
+##### Update it to fit your screen resolution, but don't make it lesser then the defaults else it will loose it's coolness and charm
 
 #### Tweakin Widgets.
 
