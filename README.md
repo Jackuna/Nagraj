@@ -49,6 +49,7 @@ Overall we will be achieving the below bullet point to run nagraj
 * Download Nagraj application.
 * Configuration of Nagraj to retrive data from your Nagios Server.
 * Bundle and run dashing application 
+* Tweaking Widgets
 
 #### Installation of Dependencies.
 
@@ -127,5 +128,38 @@ bundle install --path vendor/bundle
 dashing start
 
 ```
+To run dashing in background
 
+>   dashing start -d
+
+
+
+
+#### Tweakin Widgets.
+
+1. Ticker widget. Credits (https://gist.github.com/toddq/6527361) 
+
+Scroll your updates, news, office gossips, circular information , notifications etc at the footer part of nagraj. 
+
+![Ticker](https://github.com/Jackuna/nagraj/blob/master/ticker.png)
+
+toggle into  `  nagraj/jobs/ticker.rb `
+
+Append any messages one by one within " ", so that it cn pick it as a array.
+
+Below is such an example that scrolls custom messages.
+
+```
+ticker_items = [
+  "NagiosXI Custom Dashing dashbpard is on the way..",
+	" It's a cool widget afterall.. and it needs some more time"
+]
+
+````
+There are two modes to scroll text within this widget `vertically ` or ` horizontally.`
+How to apply it :  https://gist.github.com/toddq/6527361
+
+What if you don't have any messages for the time being or you need to simply hide this widget.
+
+The widget is not displayed by default, and will only display if it has content. You send it an array of any number of Strings, and it will rotate through them. If you send it an empty array, it will hide itself again.
 
