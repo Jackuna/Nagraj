@@ -38,7 +38,6 @@ Snapshot 02 -- Applicable to Nagios Core
 ![Nagraj](https://github.com/Jackuna/Nagraj/blob/master/anim_nagraj.gif)
 
 
-
 ### Installaton & Configuration
 
 Overall we will be achieving the below bullet point to run nagraj
@@ -99,7 +98,6 @@ One can create user by anyname and place it's home directory as per choice.
 
 Please note : any misconfiguration at this stage is vital, if mistakely you had put a wrong input you need to re download the repository and reconfigure here, else you need to manualy edit some files.Once user created let's move to next part.
 
-
 ```
 su - dashingadmin
 
@@ -153,7 +151,7 @@ Though you can anytime change the dashlets height & width by changing nagraj.erb
 ##### Update it to fit your screen resolution, but don't make it lesser then the defaults else it will loose it's coolness and charm
 
 
-#### Tweaking Widgets.
+### Tweaking Widgets.
 
 
 1. Ticker widget. Credits (https://gist.github.com/toddq/6527361) 
@@ -184,11 +182,11 @@ The widget is not displayed by default, and will only display if it has content.
 
 
 
-##### Iframe Widget.
+#### Iframe Widget.
 
 This widget can be used to rotate multiple Nagios or NagiosXI web urls or any internet/intranet webpages within the specific frame itself after fixed intervals of time.
 
-![Iframe Widget](https://github.com/Jackuna/nagraj/blob/master/iframe.jpg)
+![Iframe Widget](https://github.com/Jackuna/nagraj/blob/master/assets/images/iframe.png)
 
 
 For Nagios Core, `config_nagraj.sh`  script will itself help you out for minimal screens.
@@ -227,9 +225,21 @@ By default it lands at Nagios Core default screen, change it nagiosxi URL
        		<div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagios/"></div>
     	</li>
 ```
-####Change it to NagiosXI default URL
+
+Change it to NagiosXI default URL
 
 ```
 <div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagiosxi/">
 ```
+
+#### Klimato Widget
+
+Update your city current weather.
+
+##Settings
+
+Adjust the widget to your desired location by editing the WOEID (Where On Earth ID) in the jobs file. (You can lookup your WOEID here: http://woeid.rosselliot.co.nz)
+
+Update the value WOEID on file ` nagraj/jobs/klimato.rb ` and you are done.
+
 
