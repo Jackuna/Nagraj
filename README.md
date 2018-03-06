@@ -105,7 +105,7 @@ su - dashingadmin
 
 git clone https://github.com/Jackuna/nagraj.git
 
-cd Nagraj
+cd nagraj
 
 chmod 700 config_nagraj.sh
 
@@ -152,7 +152,9 @@ Though you can anytime change the dashlets height & width by changing nagraj.erb
 
 ##### Update it to fit your screen resolution, but don't make it lesser then the defaults else it will loose it's coolness and charm
 
-#### Tweakin Widgets.
+
+#### Tweaking Widgets.
+
 
 1. Ticker widget. Credits (https://gist.github.com/toddq/6527361) 
 
@@ -179,4 +181,55 @@ How to apply it :  https://gist.github.com/toddq/6527361
 What if you don't have any messages for the time being or you need to simply hide this widget.
 
 The widget is not displayed by default, and will only display if it has content. You send it an array of any number of Strings, and it will rotate through them. If you send it an empty array, it will hide itself again.
+
+
+
+##### Iframe Widget.
+
+This widget can be used to rotate multiple Nagios or NagiosXI web urls or any internet/intranet webpages within the specific frame itself after fixed intervals of time.
+
+![Iframe Widget](https://github.com/Jackuna/nagraj/blob/master/iframe.jpg)
+
+
+For Nagios Core, `config_nagraj.sh`  script will itself help you out for minimal screens.
+
+As an example i have added few nagios specific webpages which shows only Critical hosts, Critical, Warning Services, Hostgroup overview, which loads one after another after 10 seconds.
+
+You can add/remove additional webpages to it by editing the file `/jobs/iframeload.rb` 
+
+```  SCHEDULER.every '180s' do ```
+
+Above lines triggers the same job/cycle every 180 seconds.
+
+To add a new URL within the iframe widget to display it along the others, add these two lines
+
+Store  your URL into some variable
+
+    your_own_text = "http://cyberkeeda.com/nagios";
+
+then append the below lines at the end of file but  before the string `end` 
+amd use the same above defined variable with `src : your_own_text `
+
+```    sleep(10)
+    
+    send_event('iframeId1',   { src: your_own_text })
+```
+
+Add as many URL you wish but keep in mind about the job interval 180 and sleep timing.
+
+Above decribed way works with ` NagiosXI ` too, the only additional changes is one need to update the default landing page for this iframe widget at `\dashboards\nagraj.erb`  & `\dashboards\nagrajtv.erb`
+
+By default it lands at Nagios Core default screen, change it nagiosxi URL
+```
+<!-- Nagios URL within Iframe widget section -->
+
+	<li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
+       		<div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagios/"></div>
+    	</li>
+```
+####Change it to NagiosXI default URL
+
+```
+<div data-id="iframeId1" data-view="Iframe" scrolling="yes" data-src="https://nagios.example.com/nagiosxi/">
+```
 
