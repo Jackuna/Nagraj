@@ -234,7 +234,7 @@ Change it to NagiosXI default URL
 
 Update your city current weather.
 
-##Settings
+## Settings
 
 Adjust the widget to your desired location by editing the WOEID (Where On Earth ID) in the jobs file. (You can lookup your WOEID here: http://woeid.rosselliot.co.nz)
 
