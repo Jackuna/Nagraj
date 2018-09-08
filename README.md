@@ -1,5 +1,6 @@
 # NagRaj : dashing-nagios
 
+Nagraj : King of Nagios Dashboards :)
 Flat Nagios Dashing Dashboard based on Dashing project.
 This Nagios Dashboard can be integrated with Nagios Core and NagiosXI both.
 I have designed it to fit big monitors/TV screens kept within floor, to monitor on the way.
