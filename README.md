@@ -70,8 +70,8 @@ curl -L get.rvm.io | bash -s stable
 ` . /etc/profile.d/rvm.sh `
 
 ```
-rvm install 2.5.0
-rvm use 2.5.0 --default
+rvm install 2.5.3
+rvm use 2.5.3 --default
 ruby --version
 ```
 
