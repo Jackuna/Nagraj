@@ -24,12 +24,12 @@ rvm reload
 rvm requirements run
 
 # Installation of Ruby 2.5.0
-rvm install 2.5.0
-rvm use 2.5.0 --default
+rvm install 2.5.3
+rvm use 2.5.3 --default
 ruby --version
 
 gem install dashing
 gem install bundler
-
+2.5.0
 
 
